@@ -32,6 +32,7 @@ class MP3_Id3
     {
         $this->file = $file;
         $this->best = new MP3_Id3_Best();
+        $this->best->read($this->file);
     }
 
 
@@ -50,18 +51,6 @@ class MP3_Id3
     public function getMeta()
     {
         return $this->best->getMeta();
-    }
-
-
-    /**
-     * @throws MP3_Id3_Exception
-     * @return MP3_Id3
-     */
-    public function read()
-    {
-        $this->best->read($this->file);
-
-        return $this;
     }
 
 

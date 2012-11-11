@@ -4,11 +4,9 @@
 ```php
 <?php
 set_include_path(__DIR__);
-
 require_once 'MP3/Id3.php';
 
-$id3 = new MP3_Id3(__DIR__ . '/file.mp3');
-$id3->read();
+$id3 = new MP3_Id3('./file.mp3');
 $tags = $id3->getTags();
 
 echo '<pre>';
