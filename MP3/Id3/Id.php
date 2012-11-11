@@ -30,6 +30,7 @@ abstract class MP3_Id3_Id implements IteratorAggregate
 
 
     abstract public function write($file);
+
     abstract public function read($file);
 
 
@@ -41,6 +42,11 @@ abstract class MP3_Id3_Id implements IteratorAggregate
         return new ArrayIterator(get_object_vars($this));
     }
 
+    /**
+     * @param string $albumTitle
+     *
+     * @return MP3_Id3_Id
+     */
     public function setAlbumTitle($albumTitle)
     {
         $this->albumTitle = $albumTitle;
@@ -48,11 +54,19 @@ abstract class MP3_Id3_Id implements IteratorAggregate
         return $this;
     }
 
+    /**
+     * @return string
+     */
     public function getAlbumTitle()
     {
         return $this->albumTitle;
     }
 
+    /**
+     * @param string $artistName
+     *
+     * @return MP3_Id3_Id
+     */
     public function setArtistName($artistName)
     {
         $this->artistName = $artistName;
@@ -60,11 +74,19 @@ abstract class MP3_Id3_Id implements IteratorAggregate
         return $this;
     }
 
+    /**
+     * @return string
+     */
     public function getArtistName()
     {
         return $this->artistName;
     }
 
+    /**
+     * @param string $comment
+     *
+     * @return MP3_Id3_Id
+     */
     public function setComment($comment)
     {
         $this->comment = $comment;
@@ -72,11 +94,19 @@ abstract class MP3_Id3_Id implements IteratorAggregate
         return $this;
     }
 
+    /**
+     * @return string
+     */
     public function getComment()
     {
         return $this->comment;
     }
 
+    /**
+     * @param string $composer
+     *
+     * @return MP3_Id3_Id
+     */
     public function setComposer($composer)
     {
         $this->composer = $composer;
@@ -84,11 +114,19 @@ abstract class MP3_Id3_Id implements IteratorAggregate
         return $this;
     }
 
+    /**
+     * @return string
+     */
     public function getComposer()
     {
         return $this->composer;
     }
 
+    /**
+     * @param string $copyright
+     *
+     * @return MP3_Id3_Id
+     */
     public function setCopyright($copyright)
     {
         $this->copyright = $copyright;
@@ -96,11 +134,19 @@ abstract class MP3_Id3_Id implements IteratorAggregate
         return $this;
     }
 
+    /**
+     * @return string
+     */
     public function getCopyright()
     {
         return $this->copyright;
     }
 
+    /**
+     * @param string $genreId
+     *
+     * @return MP3_Id3_Id
+     */
     public function setGenreId($genreId)
     {
         $genre = new MP3_Id3_Genre();
@@ -110,6 +156,11 @@ abstract class MP3_Id3_Id implements IteratorAggregate
         return $this;
     }
 
+    /**
+     * @param MP3_Id3_Genre $genre
+     *
+     * @return MP3_Id3_Id
+     */
     public function setGenre(MP3_Id3_Genre $genre = null)
     {
         $this->genre = $genre;
@@ -125,6 +176,11 @@ abstract class MP3_Id3_Id implements IteratorAggregate
         return (null === $this->genre ? new MP3_Id3_Genre() : $this->genre);
     }
 
+    /**
+     * @param string $trackTitle
+     *
+     * @return MP3_Id3_Id
+     */
     public function setTrackTitle($trackTitle)
     {
         $this->trackTitle = $trackTitle;
@@ -132,11 +188,19 @@ abstract class MP3_Id3_Id implements IteratorAggregate
         return $this;
     }
 
+    /**
+     * @return string
+     */
     public function getTrackTitle()
     {
         return $this->trackTitle;
     }
 
+    /**
+     * @param string $trackNumber
+     *
+     * @return MP3_Id3_Id
+     */
     public function setTrackNumber($trackNumber)
     {
         $this->trackNumber = $trackNumber;
@@ -144,11 +208,19 @@ abstract class MP3_Id3_Id implements IteratorAggregate
         return $this;
     }
 
+    /**
+     * @return string
+     */
     public function getTrackNumber()
     {
         return $this->trackNumber;
     }
 
+    /**
+     * @param string $url
+     *
+     * @return MP3_Id3_Id
+     */
     public function setUrl($url)
     {
         $this->url = $url;
@@ -156,11 +228,19 @@ abstract class MP3_Id3_Id implements IteratorAggregate
         return $this;
     }
 
+    /**
+     * @return string
+     */
     public function getUrl()
     {
         return $this->url;
     }
 
+    /**
+     * @param string $year
+     *
+     * @return MP3_Id3_Id
+     */
     public function setYear($year)
     {
         $this->year = $year;
@@ -168,11 +248,19 @@ abstract class MP3_Id3_Id implements IteratorAggregate
         return $this;
     }
 
+    /**
+     * @return string
+     */
     public function getYear()
     {
         return $this->year;
     }
 
+    /**
+     * @param string $encodedBy
+     *
+     * @return MP3_Id3_Id
+     */
     public function setEncodedBy($encodedBy)
     {
         $this->encodedBy = $encodedBy;
@@ -180,11 +268,19 @@ abstract class MP3_Id3_Id implements IteratorAggregate
         return $this;
     }
 
+    /**
+     * @return string
+     */
     public function getEncodedBy()
     {
         return $this->encodedBy;
     }
 
+    /**
+     * @param string $albumArtist
+     *
+     * @return MP3_Id3_Id
+     */
     public function setAlbumArtist($albumArtist)
     {
         $this->albumArtist = $albumArtist;
@@ -192,6 +288,9 @@ abstract class MP3_Id3_Id implements IteratorAggregate
         return $this;
     }
 
+    /**
+     * @return string
+     */
     public function getAlbumArtist()
     {
         return $this->albumArtist;

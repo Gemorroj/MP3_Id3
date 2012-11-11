@@ -42,22 +42,36 @@ class MP3_Id3_Best extends MP3_Id3_Id
     }
 
 
+    /**
+     * @return MP3_Id3_Idv1
+     */
     public function getIdv1()
     {
         return $this->idv1;
     }
 
+    /**
+     * @return MP3_Id3_Idv2
+     */
     public function getIdv2()
     {
         return $this->idv2;
     }
 
+    /**
+     * @return MP3_Id3_Meta
+     */
     public function getMeta()
     {
         return $this->meta;
     }
 
 
+    /**
+     * @param string $file
+     *
+     * @return MP3_Id3_Best
+     */
     public function read($file)
     {
         $this->idv1->read($file);
@@ -69,6 +83,11 @@ class MP3_Id3_Best extends MP3_Id3_Id
         return $this;
     }
 
+    /**
+     * @param string $file
+     *
+     * @return MP3_Id3_Best
+     */
     public function write($file)
     {
         $this->writeTags();
@@ -100,6 +119,7 @@ class MP3_Id3_Best extends MP3_Id3_Id
         $this->meta->setLayer($idv1->layer);
         $this->meta->setBitrate($idv1->bitrate);
         $this->meta->setLength($idv1->lengths);
+        $this->meta->setQuality($idv1->quality);
 
         return $this;
     }
