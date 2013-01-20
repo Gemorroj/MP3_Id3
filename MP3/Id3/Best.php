@@ -74,8 +74,18 @@ class MP3_Id3_Best extends MP3_Id3_Id
      */
     public function read($file)
     {
-        $this->idv1->read($file);
-        $this->idv2->read($file);
+        $idv1 = true;
+        $idv2 = true;
+        try {
+            $this->idv1->read($file);
+        } catch (Exception $idv1) {}
+        try {
+            $this->idv2->read($file);
+        } catch (Exception $idv2) {}
+
+        if ($idv1 !== true && $idv2 !== true) {
+            throw new MP3_Id3_Exception($idv1->getMessage() . "\n" . $idv2->getMessage());
+        }
 
         $this->readTags();
         $this->readMeta();
@@ -151,6 +161,7 @@ class MP3_Id3_Best extends MP3_Id3_Id
         $this->setUrl($this->idv2->getUrl() ? $this->idv2->getUrl() : $this->idv1->getUrl());
         $this->setEncodedBy($this->idv2->getEncodedBy() ? $this->idv2->getEncodedBy() : $this->idv1->getEncodedBy());
         $this->setGenre($this->idv2->getGenre() ? $this->idv2->getGenre() : $this->idv1->getGenre());
+        $this->setPicture($this->idv2->getPicture() ? $this->idv2->getPicture() : $this->idv1->getPicture());
 
         return $this;
     }
@@ -187,7 +198,8 @@ class MP3_Id3_Best extends MP3_Id3_Id
             ->setCopyright($this->getCopyright())
             ->setUrl($this->getUrl())
             ->setEncodedBy($this->getEncodedBy())
-            ->setGenre($this->getGenre());
+            ->setGenre($this->getGenre())
+            ->setPicture($this->getPicture());
 
         return $this;
     }

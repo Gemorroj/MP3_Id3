@@ -16,8 +16,10 @@ require_once 'MP3/IDv2/Reader.php';
 require_once 'MP3/IDv2/Writer.php';
 require_once 'MP3/Id3/Id.php';
 require_once 'MP3/Id3/Genre.php';
+require_once 'MP3/Id3/Picture.php';
 require_once 'MP3/Id3/Exception.php';
 require_once 'MP3/IDv2/Tag.php';
+require_once 'MP3/IDv2/Frame/APIC.php';
 require_once 'MP3/IDv2/Frame/TCON.php';
 require_once 'MP3/IDv2/Frame/TRCK.php';
 require_once 'MP3/IDv2/Frame/TIT2.php';
@@ -182,6 +184,15 @@ class MP3_Id3_Idv2 extends MP3_Id3_Id
                 $frame->addGenre($this->getGenre()->getId(), $this->getGenre()->getName());
                 $tag->addFrame($frame);
                 break;
+
+            case 'picture':
+                $frame = new MP3_IDv2_Frame_APIC();
+
+                $frame->setMimeType($this->getPicture()->getMime());
+                $frame->setPicture($this->getPicture()->getData());
+
+                $tag->addFrame($frame);
+                break;
             }
         }
 
@@ -246,6 +257,13 @@ class MP3_Id3_Idv2 extends MP3_Id3_Id
                 $genres = $v->getGenres();
                 $genre->setGenre($genres[0]);
                 $this->setGenre($genre);
+                break;
+
+            case 'APIC':
+                $picture = new MP3_Id3_Picture();
+                $picture->setMime($v->getMimeType());
+                $picture->setData($v->getPicture());
+                $this->setPicture($picture);
                 break;
             }
         }

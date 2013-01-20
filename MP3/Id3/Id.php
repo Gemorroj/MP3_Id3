@@ -27,6 +27,7 @@ abstract class MP3_Id3_Id implements IteratorAggregate
     protected $copyright;
     protected $url;
     protected $encodedBy;
+    protected $picture;
 
 
     abstract public function write($file);
@@ -294,5 +295,26 @@ abstract class MP3_Id3_Id implements IteratorAggregate
     public function getAlbumArtist()
     {
         return $this->albumArtist;
+    }
+
+
+    /**
+     * @param MP3_Id3_Picture $picture
+     *
+     * @return MP3_Id3_Id
+     */
+    public function setPicture(MP3_Id3_Picture $picture = null)
+    {
+        $this->picture = $picture;
+
+        return $this;
+    }
+
+    /**
+     * @return MP3_Id3_Picture
+     */
+    public function getPicture()
+    {
+        return (null === $this->picture ? new MP3_Id3_Picture() : $this->picture);
     }
 }
