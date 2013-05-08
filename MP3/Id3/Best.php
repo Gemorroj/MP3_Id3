@@ -70,6 +70,7 @@ class MP3_Id3_Best extends MP3_Id3_Id
     /**
      * @param string $file
      *
+     * @throws MP3_Id3_Exception
      * @return MP3_Id3_Best
      */
     public function read($file)
