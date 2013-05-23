@@ -57,6 +57,9 @@ class MP3_Id3_Genre
         return $this->name;
     }
 
+    /**
+     * @return string
+     */
     public function __toString()
     {
         return (string)$this->getName();
