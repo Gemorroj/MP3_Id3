@@ -3,10 +3,8 @@ require_once 'MP3/Id3/Exception.php';
 
 class MP3_Id3_ExceptionTest extends PHPUnit_Framework_TestCase
 {
-    public function testMock()
+    public function test()
     {
-        $this->markTestIncomplete(
-            'This test has not been implemented yet.'
-        );
+        $this->assertInstanceOf('Exception', new MP3_Id3_Exception);
     }
 }
