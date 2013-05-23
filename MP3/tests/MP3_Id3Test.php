@@ -12,9 +12,6 @@ class MP3_Id3Test extends PHPUnit_Framework_TestCase
 
     public function testMock()
     {
-        //$this->mock;
-        $this->markTestIncomplete(
-            'This test has not been implemented yet.'
-        );
+        $this->assertInstanceOf('MP3_Id3', $this->mock);
     }
 }
