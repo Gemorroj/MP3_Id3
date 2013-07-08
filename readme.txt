@@ -1,6 +1,6 @@
-Работа с MP3 тегами.
+Package for working with MP3 tags.
 
-Пример:
+Example:
 set_include_path(__DIR__ . '/PEAR');
 require_once 'MP3/Id3.php';
 

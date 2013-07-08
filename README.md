@@ -1,6 +1,6 @@
-# Работа с MP3 тегами.
+# Package for working with MP3 tags.
 
-Пример:
+Example:
 ```php
 <?php
 set_include_path(__DIR__ . '/PEAR');
