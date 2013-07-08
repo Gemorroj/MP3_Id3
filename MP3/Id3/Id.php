@@ -34,8 +34,6 @@ abstract class MP3_Id3_Id implements IteratorAggregate
 
     abstract public function read($file);
 
-    abstract public function getId();
-
 
     /**
      * @return ArrayIterator
