@@ -4,7 +4,7 @@ require_once 'MP3/Id3.php';
 class MP3_Id3Test extends PHPUnit_Framework_TestCase
 {
     /**
-     * @var PHPUnit_Framework_MockObject_MockObject
+     * @var MP3_Id3
      */
     protected $mock;
 

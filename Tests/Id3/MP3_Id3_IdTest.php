@@ -4,7 +4,7 @@ require_once 'MP3/Id3/Id.php';
 class MP3_Id3_IdTest extends PHPUnit_Framework_TestCase
 {
     /**
-     * @var PHPUnit_Framework_MockObject_MockObject
+     * @var MP3_Id3_Id
      */
     protected $mock;
 
@@ -105,7 +105,7 @@ class MP3_Id3_IdTest extends PHPUnit_Framework_TestCase
 
     public function testGenre()
     {
-        $genre = $this->getMock('MP3_Id3_Genre');
+        $genre = new MP3_Id3_Genre;
         $genre->setGenre(0);
 
         $setGenre = $this->mock->setGenre($genre);
@@ -118,7 +118,7 @@ class MP3_Id3_IdTest extends PHPUnit_Framework_TestCase
 
     public function testGenreFail()
     {
-        $genre = $this->getMock('MP3_Id3_Genre');
+        $genre = new MP3_Id3_Genre;
         $genre->setGenre(-1);
 
         $setGenreId = $this->mock->setGenre($genre);
@@ -188,7 +188,7 @@ class MP3_Id3_IdTest extends PHPUnit_Framework_TestCase
     {
         $albumArtist = 'testAlbumArtist';
 
-        $setAlbumArtist = $this->mock->setEncodedBy($albumArtist);
+        $setAlbumArtist = $this->mock->setAlbumArtist($albumArtist);
         $this->assertInstanceOf('MP3_Id3_Id', $setAlbumArtist);
 
         $getAlbumArtist = $this->mock->getAlbumArtist();
@@ -197,7 +197,7 @@ class MP3_Id3_IdTest extends PHPUnit_Framework_TestCase
 
     public function testPicture()
     {
-        $picture = $this->getMock('MP3_Id3_Picture');
+        $picture = new MP3_Id3_Picture;
         $picture->setData('testData');
         $picture->setMime('testMime');
 
