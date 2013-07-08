@@ -5,6 +5,9 @@ php:
   - "5.3"
   - "5.2"
 
+before_script:
+  - pear install pear/MP3_Id
+
 script: phpunit --configuration MP3/phpunit.xml
 
 notifications:
