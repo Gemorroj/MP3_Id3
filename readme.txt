@@ -1,4 +1,4 @@
-Package for working with MP3 tags.
+This package provides handling of mp3 tags in PHP.
 
 Requirements:
 

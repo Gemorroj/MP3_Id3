@@ -1,4 +1,4 @@
-# Package for working with MP3 tags.
+# This package provides handling of mp3 tags in PHP.
 
 [![Build Status](https://secure.travis-ci.org/Gemorroj/MP3_Id3.png?branch=master)](https://travis-ci.org/Gemorroj/MP3_Id3)
 
