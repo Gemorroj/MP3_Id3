@@ -3,7 +3,7 @@
 Example:
 ```php
 <?php
-set_include_path(__DIR__ . '/PEAR');
+set_include_path(dirname(__FILE__) . '/PEAR');
 require_once 'MP3/Id3.php';
 
 $id3 = new MP3_Id3('./file2.mp3');
