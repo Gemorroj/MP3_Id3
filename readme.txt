@@ -1,6 +1,7 @@
 Package for working with MP3 tags.
 
 Requirements:
+
 1. PHP >= 5.2
 2. PEAR
 3. MP3_Id
