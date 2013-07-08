@@ -106,7 +106,7 @@ class MP3_Id3_IdTest extends PHPUnit_Framework_TestCase
     public function testGenre()
     {
         $genre = $this->getMock('MP3_Id3_Genre');
-        $genre->setId(0);
+        $genre->setGenre(0);
 
         $setGenre = $this->mock->setGenre($genre);
         $this->assertInstanceOf('MP3_Id3_Id', $setGenre);
@@ -119,7 +119,7 @@ class MP3_Id3_IdTest extends PHPUnit_Framework_TestCase
     public function testGenreFail()
     {
         $genre = $this->getMock('MP3_Id3_Genre');
-        $genre->setId(-1);
+        $genre->setGenre(-1);
 
         $setGenreId = $this->mock->setGenre($genre);
         $this->assertInstanceOf('MP3_Id3_Id', $setGenreId);
