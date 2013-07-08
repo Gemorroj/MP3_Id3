@@ -10,7 +10,7 @@ before_script:
   - pear install pear/MP3_Id
   - pear install pear/MP3_IDv2
 
-script: phpunit --configuration MP3/phpunit.xml
+script: phpunit --configuration phpunit.xml
 
 notifications:
   email: false
