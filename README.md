@@ -1,5 +1,7 @@
 # Package for working with MP3 tags.
 
+[![Build Status](https://secure.travis-ci.org/Gemorroj/MP3_Id3.png?branch=master)](https://travis-ci.org/Gemorroj/MP3_Id3)
+
 Requirements:
 1. PHP >= 5.2
 2. PEAR
