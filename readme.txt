@@ -1,5 +1,9 @@
 Package for working with MP3 tags.
 
+Requirements:
+PHP >= 5.2
+PEAR, MP3_Id, MP3_IDv2
+
 Example:
 set_include_path(dirname(__FILE__) . '/PEAR');
 require_once 'MP3/Id3.php';
