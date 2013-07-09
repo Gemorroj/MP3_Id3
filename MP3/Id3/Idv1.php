@@ -46,7 +46,7 @@ class MP3_Id3_Idv1 extends MP3_Id3_Id
     public function read($file)
     {
         $read = $this->id->read($file);
-        if (PEAR::isError($read)) {
+        if (PEAR::isError($read) && $read->getCode() !== PEAR_MP3_ID_TNF) {
             throw new MP3_Id3_Exception($read->getMessage(), $read->getCode());
         }
         $this->readTags();

@@ -209,65 +209,73 @@ class MP3_Id3_Idv2 extends MP3_Id3_Id
      */
     protected function readTags()
     {
-        foreach ($this->reader->getTag()->getFrames() as $v) {
-            switch ($v->getId()) {
-            case 'TRCK':
-                $this->setTrackNumber($v->getText());
-                break;
+        $level = error_reporting(E_ALL ^ E_NOTICE); // fix empty tags
 
-            case 'TIT2':
-                $this->setTrackTitle($v->getText());
-                break;
+        $tag = $this->reader->getTag();
 
-            case 'TOPE':
-                $this->setArtistName($v->getText());
-                break;
+        error_reporting($level);
 
-            case 'TALB':
-                $this->setAlbumTitle($v->getText());
-                break;
+        if ($tag instanceof MP3_IDv2_Tag) {
+            foreach ($tag->getFrames() as $v) {
+                switch ($v->getId()) {
+                case 'TRCK':
+                    $this->setTrackNumber($v->getText());
+                    break;
 
-            case 'TPE2':
-                $this->setAlbumArtist($v->getText());
-                break;
+                case 'TIT2':
+                    $this->setTrackTitle($v->getText());
+                    break;
 
-            case 'TYER':
-                $this->setYear($v->getText());
-                break;
+                case 'TOPE':
+                    $this->setArtistName($v->getText());
+                    break;
 
-            case 'TCOP':
-                $this->setCopyright($v->getText());
-                break;
+                case 'TALB':
+                    $this->setAlbumTitle($v->getText());
+                    break;
 
-            case 'WOAF':
-                $this->setUrl($v->getUrl());
-                break;
+                case 'TPE2':
+                    $this->setAlbumArtist($v->getText());
+                    break;
 
-            case 'TCOM':
-                $this->setComposer($v->getText());
-                break;
+                case 'TYER':
+                    $this->setYear($v->getText());
+                    break;
 
-            case 'TENC':
-                $this->setEncodedBy($v->getText());
-                break;
+                case 'TCOP':
+                    $this->setCopyright($v->getText());
+                    break;
 
-            case 'TXXX':
-                $this->setComment($v->getValue());
-                break;
+                case 'WOAF':
+                    $this->setUrl($v->getUrl());
+                    break;
 
-            case 'TCON':
-                $genre = new MP3_Id3_Genre();
-                $genres = $v->getGenres();
-                $genre->setGenre($genres[0]);
-                $this->setGenre($genre);
-                break;
+                case 'TCOM':
+                    $this->setComposer($v->getText());
+                    break;
 
-            case 'APIC':
-                $picture = new MP3_Id3_Picture();
-                $picture->setMime($v->getMimeType());
-                $picture->setData($v->getPicture());
-                $this->setPicture($picture);
-                break;
+                case 'TENC':
+                    $this->setEncodedBy($v->getText());
+                    break;
+
+                case 'TXXX':
+                    $this->setComment($v->getValue());
+                    break;
+
+                case 'TCON':
+                    $genre = new MP3_Id3_Genre();
+                    $genres = $v->getGenres();
+                    $genre->setGenre($genres[0]);
+                    $this->setGenre($genre);
+                    break;
+
+                case 'APIC':
+                    $picture = new MP3_Id3_Picture();
+                    $picture->setMime($v->getMimeType());
+                    $picture->setData($v->getPicture());
+                    $this->setPicture($picture);
+                    break;
+                }
             }
         }
 

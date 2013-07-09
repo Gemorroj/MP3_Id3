@@ -86,6 +86,34 @@ class MP3_Id3_Idv2Test extends PHPUnit_Framework_TestCase
         $this->assertInstanceOf('MP3_Id3_Idv2', $write);
     }
 
+    public function testWrite4()
+    {
+        $file = dirname(__FILE__) . '/../file4.mp3';
+        $tmpFile = dirname(__FILE__) . '/../tmp/testWrite4Idv2.mp3';
+
+        $object = new MP3_Id3_Idv2();
+        $object->read($file);
+
+        copy($file, $tmpFile);
+        $write = $object->write($tmpFile);
+        unlink($tmpFile);
+        $this->assertInstanceOf('MP3_Id3_Idv2', $write);
+    }
+
+    public function testWrite5()
+    {
+        $file = dirname(__FILE__) . '/../file5.mp3';
+        $tmpFile = dirname(__FILE__) . '/../tmp/testWrite5Idv2.mp3';
+
+        $object = new MP3_Id3_Idv2();
+        $object->read($file);
+
+        copy($file, $tmpFile);
+        $write = $object->write($tmpFile);
+        unlink($tmpFile);
+        $this->assertInstanceOf('MP3_Id3_Idv2', $write);
+    }
+
     public function testWriteFail()
     {
         $file = dirname(__FILE__) . '/../file1.mp3';

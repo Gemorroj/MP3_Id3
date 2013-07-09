@@ -74,8 +74,36 @@ class MP3_Id3_Idv1Test extends PHPUnit_Framework_TestCase
 
     public function testWrite3()
     {
-        $file = dirname(__FILE__) . '/../file2.mp3';
-        $tmpFile = dirname(__FILE__) . '/../tmp/testWrite3Idv1.mp3';
+        $file = dirname(__FILE__) . '/../file3.mp3';
+        $tmpFile = dirname(__FILE__) . '/../tmp/testWrite4Idv1.mp3';
+
+        $object = new MP3_Id3_Idv1();
+        $object->read($file);
+
+        copy($file, $tmpFile);
+        $write = $object->write($tmpFile);
+        unlink($tmpFile);
+        $this->assertInstanceOf('MP3_Id3_Idv1', $write);
+    }
+
+    public function testWrite4()
+    {
+        $file = dirname(__FILE__) . '/../file4.mp3';
+        $tmpFile = dirname(__FILE__) . '/../tmp/testWrite4Idv1.mp3';
+
+        $object = new MP3_Id3_Idv1();
+        $object->read($file);
+
+        copy($file, $tmpFile);
+        $write = $object->write($tmpFile);
+        unlink($tmpFile);
+        $this->assertInstanceOf('MP3_Id3_Idv1', $write);
+    }
+
+    public function testWrite5()
+    {
+        $file = dirname(__FILE__) . '/../file5.mp3';
+        $tmpFile = dirname(__FILE__) . '/../tmp/testWrite5Idv1.mp3';
 
         $object = new MP3_Id3_Idv1();
         $object->read($file);
