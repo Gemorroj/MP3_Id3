@@ -6,7 +6,7 @@ class MP3_Id3_Idv2Test extends PHPUnit_Framework_TestCase
     public function testGetId()
     {
         $object = new MP3_Id3_Idv2();
-        $this->assertInstanceOf('MP3_Id', $object->getId());
+        $this->assertInstanceOf('MP3_IDv2_Reader', $object->getId());
     }
 
     public function testRead()
