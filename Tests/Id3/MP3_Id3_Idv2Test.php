@@ -9,7 +9,7 @@ class MP3_Id3_Idv2Test extends PHPUnit_Framework_TestCase
         $this->assertInstanceOf('MP3_IDv2_Reader', $object->getId());
     }
 
-    public function testRead()
+    public function testRead1()
     {
         $object = new MP3_Id3_Idv2();
 
@@ -36,6 +36,24 @@ class MP3_Id3_Idv2Test extends PHPUnit_Framework_TestCase
         $this->assertInstanceOf('MP3_Id3_Idv2', $read);
     }
 
+    public function testRead4()
+    {
+        $object = new MP3_Id3_Idv2();
+
+        $read = $object->read(dirname(__FILE__) . '/../file4.mp3');
+
+        $this->assertInstanceOf('MP3_Id3_Idv2', $read);
+    }
+
+    public function testRead5()
+    {
+        $object = new MP3_Id3_Idv2();
+
+        $read = $object->read(dirname(__FILE__) . '/../file5.mp3');
+
+        $this->assertInstanceOf('MP3_Id3_Idv2', $read);
+    }
+
     public function testReadFail()
     {
         $object = new MP3_Id3_Idv2();
@@ -44,10 +62,10 @@ class MP3_Id3_Idv2Test extends PHPUnit_Framework_TestCase
         $object->read('fake_file.mp3');
     }
 
-    public function testWrite()
+    public function testWrite1()
     {
         $file = dirname(__FILE__) . '/../file1.mp3';
-        $tmpFile = dirname(__FILE__) . '/../tmp/testWriteIdv2.mp3';
+        $tmpFile = dirname(__FILE__) . '/../tmp/testWrite1Idv2.mp3';
 
         $object = new MP3_Id3_Idv2();
         $object->read($file);

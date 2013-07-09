@@ -75,18 +75,8 @@ class MP3_Id3_Best extends MP3_Id3_Id
      */
     public function read($file)
     {
-        $idv1 = true;
-        $idv2 = true;
-        try {
-            $this->idv1->read($file);
-        } catch (Exception $idv1) {}
-        try {
-            $this->idv2->read($file);
-        } catch (Exception $idv2) {}
-
-        if ($idv1 !== true && $idv2 !== true) {
-            throw new MP3_Id3_Exception($idv1->getMessage() . "\n" . $idv2->getMessage());
-        }
+        $this->idv1->read($file);
+        $this->idv2->read($file);
 
         $this->readTags();
         $this->readMeta();
@@ -117,7 +107,13 @@ class MP3_Id3_Best extends MP3_Id3_Id
     {
         $idv1 = $this->idv1->getId();
         //$meta = $idv1->study();
+
+        $level = error_reporting(E_ALL ^ E_NOTICE); // fix empty tags
+
         $meta = $idv1->_readframe();
+
+        error_reporting($level);
+
         if (PEAR::isError($meta)) {
             throw new MP3_Id3_Exception($meta->getMessage(), $meta->getCode());
         }

@@ -9,6 +9,9 @@ Requirements:
 3. MP3_Id
 4. MP3_IDv2
 
+Warning!
+Due to the outdated design PEAR::isError, in some cases, PHP generates E_STRICT warning
+
 Example:
 ```php
 <?php
