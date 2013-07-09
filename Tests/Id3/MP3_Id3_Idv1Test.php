@@ -29,7 +29,7 @@ class MP3_Id3_Idv1Test extends PHPUnit_Framework_TestCase
     public function testWrite()
     {
         $file = dirname(__FILE__) . '/../file1.mp3';
-        $tmpFile = dirname(__FILE__) . '/../tmp/testWrite.mp3';
+        $tmpFile = dirname(__FILE__) . '/../tmp/testWriteIdv1.mp3';
 
         $object = new MP3_Id3_Idv1();
         $object->read($file);
