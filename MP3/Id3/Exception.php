@@ -1,14 +1,20 @@
 <?php
 /**
+ * MP3_Id3_Exception
  *
- * This software is distributed under the GNU GPL v3.0 license.
+ * PHP versions 5
  *
+ * LICENSE: This source file is subject to version 3.01 of the PHP license
+ * that is available through the world-wide-web at the following URI:
+ * http://www.php.net/license/3_01.txt.  If you did not receive a copy of
+ * the PHP License and are unable to obtain it through the web, please
+ * send a note to license@php.net so we can mail you a copy immediately.
+ *
+ * @category  MP3
+ * @package   MP3_Id3
  * @author    Gemorroj
- * @copyright 2012 http://wapinet.ru
- * @license   http://www.gnu.org/licenses/gpl-3.0.txt
+ * @license   http://www.php.net/license/3_01.txt  PHP License 3.01
  * @link      https://github.com/Gemorroj/MP3_Id3
- * @version   0.1 alpha
- *
  */
 
 class MP3_Id3_Exception extends Exception
