@@ -88,6 +88,13 @@ class MP3_Id3_Idv2 extends MP3_Id3_Id
      */
     public function write($file)
     {
+        if (file_exists($file) !== true) {
+            throw new MP3_Id3_Exception('File "' . $file . '" not found');
+        }
+        if (is_writable($file) !== true) {
+            throw new MP3_Id3_Exception('File "' . $file . '" is not writable');
+        }
+
         $this->writeTags();
 
         $write = $this->writer->write($file);
