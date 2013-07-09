@@ -6,7 +6,7 @@ php:
   - "5.2"
 
 before_script:
-    - chmod 777 Tests/tmp
+  - chmod 777 Tests/tmp
   - pear config-set preferred_state alpha
   - pear install pear/MP3_Id
   - pear install pear/MP3_IDv2
