@@ -63,12 +63,9 @@ class MP3_Id3_Idv1 extends MP3_Id3_Id
      */
     public function write($file)
     {
-        //$read = $this->id->read($file);
-        //if (PEAR::isError($read)) {
-        //    throw new MP3_Id3_Exception($read->getMessage(), $read->getCode());
-        //}
         $this->writeTags();
 
+        $this->id->file = $file;
         //$write = $this->id->write();
         $write = $this->id->_write_v1();
         if (PEAR::isError($write)) {
