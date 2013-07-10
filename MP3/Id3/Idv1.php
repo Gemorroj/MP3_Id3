@@ -10,11 +10,11 @@
  * the PHP License and are unable to obtain it through the web, please
  * send a note to license@php.net so we can mail you a copy immediately.
  *
- * @category  MP3
- * @package   MP3_Id3
- * @author    Gemorroj
- * @license   http://www.php.net/license/3_01.txt  PHP License 3.01
- * @link      https://github.com/Gemorroj/MP3_Id3
+ * @category MP3
+ * @package  MP3_Id3
+ * @author   Gemorroj <wapinet@mail.ru>
+ * @license  http://www.php.net/license/3_01.txt  PHP License 3.01
+ * @link     https://github.com/Gemorroj/MP3_Id3
  */
 
 require_once 'PEAR.php';
@@ -23,6 +23,17 @@ require_once 'MP3/Id3/Id.php';
 require_once 'MP3/Id3/Genre.php';
 require_once 'MP3/Id3/Exception.php';
 
+/**
+ * MP3_Id3_Idv1
+ *
+ * This package provides handling of MP3 tags
+ *
+ * @category MP3
+ * @package  MP3_Id3
+ * @author   Gemorroj <wapinet@mail.ru>
+ * @license  http://www.php.net/license/3_01.txt  PHP License 3.01
+ * @link     https://github.com/Gemorroj/MP3_Id3
+ */
 class MP3_Id3_Idv1 extends MP3_Id3_Id
 {
     /**
@@ -30,12 +41,19 @@ class MP3_Id3_Idv1 extends MP3_Id3_Id
      */
     private $id;
 
+
+    /**
+     * Constructor
+     */
     public function __construct()
     {
         $this->id = new MP3_Id();
     }
 
+
     /**
+     * Get id object
+     *
      * @return MP3_Id
      */
     public function getId()
@@ -43,8 +61,11 @@ class MP3_Id3_Idv1 extends MP3_Id3_Id
         return $this->id;
     }
 
+
     /**
-     * @param string $file
+     * Read MP3 file
+     *
+     * @param string $file MP3 file
      *
      * @throws MP3_Id3_Exception
      * @return MP3_Id3_Idv1
@@ -62,7 +83,9 @@ class MP3_Id3_Idv1 extends MP3_Id3_Id
 
 
     /**
-     * @param string $file
+     * Write tags to MP3 file
+     *
+     * @param string $file MP3 file
      *
      * @throws MP3_Id3_Exception
      * @return MP3_Id3_Idv1
@@ -83,6 +106,8 @@ class MP3_Id3_Idv1 extends MP3_Id3_Id
 
 
     /**
+     * Read MP3 tags
+     *
      * @return MP3_Id3_Idv1
      */
     protected function readTags()
@@ -104,6 +129,8 @@ class MP3_Id3_Idv1 extends MP3_Id3_Id
 
 
     /**
+     * Write MP3 tags
+     *
      * @return MP3_Id3_Idv1
      */
     protected function writeTags()

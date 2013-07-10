@@ -10,21 +10,40 @@
  * the PHP License and are unable to obtain it through the web, please
  * send a note to license@php.net so we can mail you a copy immediately.
  *
- * @category  MP3
- * @package   MP3_Id3
- * @author    Gemorroj
- * @license   http://www.php.net/license/3_0.txt  PHP License 3.0
- * @link      https://github.com/Gemorroj/MP3_Id3
+ * @category MP3
+ * @package  MP3_Id3
+ * @author   Gemorroj <wapinet@mail.ru>
+ * @license  http://www.php.net/license/3_0.txt  PHP License 3.0
+ * @link     https://github.com/Gemorroj/MP3_Id3
  */
 
+/**
+ * MP3_Id3_Picture
+ *
+ * Picture tag
+ *
+ * @category MP3
+ * @package  MP3_Id3
+ * @author   Gemorroj <wapinet@mail.ru>
+ * @license  http://www.php.net/license/3_01.txt  PHP License 3.01
+ * @link     https://github.com/Gemorroj/MP3_Id3
+ */
 class MP3_Id3_Picture
 {
+    /**
+     * @var string
+     */
     protected $data;
+    /**
+     * @var string
+     */
     protected $mime;
 
 
     /**
-     * @param string $data
+     * Set picture content
+     *
+     * @param string $data Picture content
      *
      * @return MP3_Id3_Picture
      */
@@ -35,7 +54,10 @@ class MP3_Id3_Picture
         return $this;
     }
 
+
     /**
+     * Get picture content
+     *
      * @return string
      */
     public function getData()
@@ -43,8 +65,11 @@ class MP3_Id3_Picture
         return $this->data;
     }
 
+
     /**
-     * @param string $mime
+     * Set picture MIME
+     *
+     * @param string $mime Picture MIME
      *
      * @return MP3_Id3_Picture
      */
@@ -55,7 +80,10 @@ class MP3_Id3_Picture
         return $this;
     }
 
+
     /**
+     * Get picture MIME
+     *
      * @return string
      */
     public function getMime()

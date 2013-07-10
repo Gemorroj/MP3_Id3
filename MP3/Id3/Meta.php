@@ -10,28 +10,68 @@
  * the PHP License and are unable to obtain it through the web, please
  * send a note to license@php.net so we can mail you a copy immediately.
  *
- * @category  MP3
- * @package   MP3_Id3
- * @author    Gemorroj
- * @license   http://www.php.net/license/3_01.txt  PHP License 3.01
- * @link      https://github.com/Gemorroj/MP3_Id3
+ * @category MP3
+ * @package  MP3_Id3
+ * @author   Gemorroj <wapinet@mail.ru>
+ * @license  http://www.php.net/license/3_01.txt  PHP License 3.01
+ * @link     https://github.com/Gemorroj/MP3_Id3
  */
 
+/**
+ * MP3_Id3_Meta
+ *
+ * This package provides handling of MP3 tags
+ *
+ * @category MP3
+ * @package  MP3_Id3
+ * @author   Gemorroj <wapinet@mail.ru>
+ * @license  http://www.php.net/license/3_01.txt  PHP License 3.01
+ * @link     https://github.com/Gemorroj/MP3_Id3
+ */
 class MP3_Id3_Meta
 {
+    /**
+     * @var int
+     */
     protected $filesize;
+    /**
+     * @var string
+     */
     protected $encodingType;
+    /**
+     * @var float
+     */
     protected $mpegVersion;
+    /**
+     * @var int
+     */
     protected $frequency;
+    /**
+     * @var string
+     */
     protected $mode;
+    /**
+     * @var int
+     */
     protected $layer;
+    /**
+     * @var int
+     */
     protected $bitrate;
+    /**
+     * @var int
+     */
     protected $length;
+    /**
+     * @var int
+     */
     protected $quality;
 
 
     /**
-     * @param int $bitrate
+     * Set bitrate
+     *
+     * @param int $bitrate Bitrate
      *
      * @return MP3_Id3_Meta
      */
@@ -42,7 +82,10 @@ class MP3_Id3_Meta
         return $this;
     }
 
+
     /**
+     * Get bitrate
+     *
      * @return int
      */
     public function getBitrate()
@@ -50,8 +93,11 @@ class MP3_Id3_Meta
         return $this->bitrate;
     }
 
+
     /**
-     * @param string $encodingType
+     * Set encoding type
+     *
+     * @param string $encodingType Encoding type
      *
      * @return MP3_Id3_Meta
      */
@@ -62,7 +108,10 @@ class MP3_Id3_Meta
         return $this;
     }
 
+
     /**
+     * Get encoding type
+     *
      * @return string
      */
     public function getEncodingType()
@@ -70,8 +119,11 @@ class MP3_Id3_Meta
         return $this->encodingType;
     }
 
+
     /**
-     * @param int $filesize
+     * Set file size
+     *
+     * @param int $filesize File size
      *
      * @return MP3_Id3_Meta
      */
@@ -82,7 +134,10 @@ class MP3_Id3_Meta
         return $this;
     }
 
+
     /**
+     * Get file size
+     *
      * @return int
      */
     public function getFilesize()
@@ -90,8 +145,11 @@ class MP3_Id3_Meta
         return $this->filesize;
     }
 
+
     /**
-     * @param int $frequency
+     * Set frequency
+     *
+     * @param int $frequency Frequency
      *
      * @return MP3_Id3_Meta
      */
@@ -102,7 +160,10 @@ class MP3_Id3_Meta
         return $this;
     }
 
+
     /**
+     * Get frequency
+     *
      * @return int
      */
     public function getFrequency()
@@ -110,8 +171,11 @@ class MP3_Id3_Meta
         return $this->frequency;
     }
 
+
     /**
-     * @param int $layer
+     * Set layer
+     *
+     * @param int $layer Layer
      *
      * @return MP3_Id3_Meta
      */
@@ -122,7 +186,10 @@ class MP3_Id3_Meta
         return $this;
     }
 
+
     /**
+     * Get layer
+     *
      * @return int
      */
     public function getLayer()
@@ -130,8 +197,11 @@ class MP3_Id3_Meta
         return $this->layer;
     }
 
+
     /**
-     * @param int $length
+     * Set length
+     *
+     * @param int $length Length
      *
      * @return MP3_Id3_Meta
      */
@@ -142,7 +212,10 @@ class MP3_Id3_Meta
         return $this;
     }
 
+
     /**
+     * Get length
+     *
      * @return int
      */
     public function getLength()
@@ -150,8 +223,11 @@ class MP3_Id3_Meta
         return $this->length;
     }
 
+
     /**
-     * @param string $mode
+     * Set mode
+     *
+     * @param string $mode Mode
      *
      * @return MP3_Id3_Meta
      */
@@ -162,7 +238,10 @@ class MP3_Id3_Meta
         return $this;
     }
 
+
     /**
+     * Get mode
+     *
      * @return string
      */
     public function getMode()
@@ -170,8 +249,11 @@ class MP3_Id3_Meta
         return $this->mode;
     }
 
+
     /**
-     * @param float $mpegVersion
+     * Set mpeg version
+     *
+     * @param float $mpegVersion Mpeg version
      *
      * @return MP3_Id3_Meta
      */
@@ -182,7 +264,10 @@ class MP3_Id3_Meta
         return $this;
     }
 
+
     /**
+     * Get mpeg version
+     *
      * @return float
      */
     public function getMpegVersion()
@@ -190,8 +275,11 @@ class MP3_Id3_Meta
         return $this->mpegVersion;
     }
 
+
     /**
-     * @param int $quality
+     * Set quality
+     *
+     * @param int $quality Quality
      *
      * @return MP3_Id3_Meta
      */
@@ -202,7 +290,10 @@ class MP3_Id3_Meta
         return $this;
     }
 
+
     /**
+     * Get quality
+     *
      * @return int
      */
     public function getQuality()

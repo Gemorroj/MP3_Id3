@@ -10,11 +10,11 @@
  * the PHP License and are unable to obtain it through the web, please
  * send a note to license@php.net so we can mail you a copy immediately.
  *
- * @category  MP3
- * @package   MP3_Id3
- * @author    Gemorroj
- * @license   http://www.php.net/license/3_01.txt  PHP License 3.01
- * @link      https://github.com/Gemorroj/MP3_Id3
+ * @category MP3
+ * @package  MP3_Id3
+ * @author   Gemorroj <wapinet@mail.ru>
+ * @license  http://www.php.net/license/3_01.txt  PHP License 3.01
+ * @link     https://github.com/Gemorroj/MP3_Id3
  */
 
 require_once 'PEAR.php';
@@ -24,6 +24,17 @@ require_once 'MP3/Id3/Idv2.php';
 require_once 'MP3/Id3/Exception.php';
 require_once 'MP3/Id3/Meta.php';
 
+/**
+ * MP3_Id3_Best
+ *
+ * This package provides handling of MP3 tags
+ *
+ * @category MP3
+ * @package  MP3_Id3
+ * @author   Gemorroj <wapinet@mail.ru>
+ * @license  http://www.php.net/license/3_01.txt  PHP License 3.01
+ * @link     https://github.com/Gemorroj/MP3_Id3
+ */
 class MP3_Id3_Best extends MP3_Id3_Id
 {
     /**
@@ -40,6 +51,9 @@ class MP3_Id3_Best extends MP3_Id3_Id
     private $meta;
 
 
+    /**
+     * Constructor
+     */
     public function __construct()
     {
         $this->idv1 = new MP3_Id3_Idv1();
@@ -49,6 +63,8 @@ class MP3_Id3_Best extends MP3_Id3_Id
 
 
     /**
+     * Get Idv1 tags object
+     *
      * @return MP3_Id3_Idv1
      */
     public function getIdv1()
@@ -56,7 +72,10 @@ class MP3_Id3_Best extends MP3_Id3_Id
         return $this->idv1;
     }
 
+
     /**
+     * Get Idv2 tags object
+     *
      * @return MP3_Id3_Idv2
      */
     public function getIdv2()
@@ -64,7 +83,10 @@ class MP3_Id3_Best extends MP3_Id3_Id
         return $this->idv2;
     }
 
+
     /**
+     * Get meta object
+     *
      * @return MP3_Id3_Meta
      */
     public function getMeta()
@@ -74,7 +96,9 @@ class MP3_Id3_Best extends MP3_Id3_Id
 
 
     /**
-     * @param string $file
+     * Read MP3 file
+     *
+     * @param string $file MP3 file
      *
      * @throws MP3_Id3_Exception
      * @return MP3_Id3_Best
@@ -90,8 +114,11 @@ class MP3_Id3_Best extends MP3_Id3_Id
         return $this;
     }
 
+
     /**
-     * @param string $file
+     * Write tags to MP3 file
+     *
+     * @param string $file MP3 file
      *
      * @return MP3_Id3_Best
      */
@@ -105,7 +132,10 @@ class MP3_Id3_Best extends MP3_Id3_Id
         return $this;
     }
 
+
     /**
+     * Read meta data
+     *
      * @throws MP3_Id3_Exception
      * @return MP3_Id3_Best
      */
@@ -137,7 +167,10 @@ class MP3_Id3_Best extends MP3_Id3_Id
         return $this;
     }
 
+
     /**
+     * Read MP3 tags
+     *
      * @return MP3_Id3_Best
      */
     protected function readTags()
@@ -171,6 +204,8 @@ class MP3_Id3_Best extends MP3_Id3_Id
 
 
     /**
+     * Write MP3 tags
+     *
      * @return MP3_Id3_Best
      */
     protected function writeTags()
