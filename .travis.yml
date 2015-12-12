@@ -9,7 +9,6 @@ php:
 
 before_script:
   - chmod 777 Tests/tmp
-  - pear upgrade
   - pear config-set preferred_state alpha
   - pear install pear/MP3_Id
   - pear install pear/MP3_IDv2
