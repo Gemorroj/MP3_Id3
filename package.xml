@@ -25,33 +25,37 @@
 &lt;none&gt;
  </notes>
  <contents>
-  <dir baseinstalldir="/" name="/">
-   <file baseinstalldir="/" md5sum="cf71f6f38e5bc430c39579c2af5de4ad" name="/MP3/Id3.php" role="php" />
-   <file baseinstalldir="/" md5sum="6d84d221a5f88c618981dcb485b8eb9f" name="/MP3/Id3/Best.php" role="php" />
-   <file baseinstalldir="/" md5sum="3ae0b9dc0cba9f90b306b7e75773b2de" name="/MP3/Id3/Exception.php" role="php" />
-   <file baseinstalldir="/" md5sum="2fa3a80f512f98376bcb356566be219e" name="/MP3/Id3/Genre.php" role="php" />
-   <file baseinstalldir="/" md5sum="a0f3ae9015f0de551da7869e0724bae6" name="/MP3/Id3/Id.php" role="php" />
-   <file baseinstalldir="/" md5sum="f895d3b34d45a5a681fc478007e06b71" name="/MP3/Id3/Idv1.php" role="php" />
-   <file baseinstalldir="/" md5sum="cefd21904b7c910eca1d1c368d6ff7ca" name="/MP3/Id3/Idv2.php" role="php" />
-   <file baseinstalldir="/" md5sum="868a299079903258af6424a8694252c5" name="/MP3/Id3/Meta.php" role="php" />
-   <file baseinstalldir="/" md5sum="749e6e55678b0d671b16e50b1f3e89fc" name="/MP3/Id3/Picture.php" role="php" />
-   <file baseinstalldir="/" md5sum="0327231ef08687c6ec0f0f2ae12c668d" name="/Tests/bootstrap.php" role="test" />
-   <file baseinstalldir="/" md5sum="9f7878d99426077263dbcb9a6df4c3a4" name="/Tests/file1.mp3" role="test" />
-   <file baseinstalldir="/" md5sum="1d69c5c455b3834d44e0805339dc3701" name="/Tests/file2.mp3" role="test" />
-   <file baseinstalldir="/" md5sum="5887398f17f2a816464a63f9dd4c672e" name="/Tests/file3.mp3" role="test" />
-   <file baseinstalldir="/" md5sum="19aa57a04c5f74013ef751b7f0b87d79" name="/Tests/file4.mp3" role="test" />
-   <file baseinstalldir="/" md5sum="0eb8256ce6247a78d04f49748b73bc39" name="/Tests/file5.mp3" role="test" />
-   <file baseinstalldir="/" md5sum="3e7a4ed17aab46686578ff98ce5408a1" name="/Tests/MP3_Id3Test.php" role="test" />
-   <file baseinstalldir="/" md5sum="bfb59d597e1af185841f09c5f92570df" name="/Tests/Id3/MP3_Id3_BestTest.php" role="test" />
-   <file baseinstalldir="/" md5sum="8b9573daec6c100e1a09c7ded3f55273" name="/Tests/Id3/MP3_Id3_ExceptionTest.php" role="test" />
-   <file baseinstalldir="/" md5sum="4b4b9da42f129f87cdb27607d1295e8b" name="/Tests/Id3/MP3_Id3_GenreTest.php" role="test" />
-   <file baseinstalldir="/" md5sum="a75fed6c451d7f8467aa4843a4e41e0c" name="/Tests/Id3/MP3_Id3_IdTest.php" role="test" />
-   <file baseinstalldir="/" md5sum="b358c09b799aec0950d878791e02e788" name="/Tests/Id3/MP3_Id3_Idv1Test.php" role="test" />
-   <file baseinstalldir="/" md5sum="e9f55c623263148eac07b17289583435" name="/Tests/Id3/MP3_Id3_Idv2Test.php" role="test" />
-   <file baseinstalldir="/" md5sum="b7419e8bc36f02f8c2b2a4ded4b96510" name="/Tests/Id3/MP3_Id3_MetaTest.php" role="test" />
-   <file baseinstalldir="/" md5sum="df5fd11b86762e257a83f881297bb9e4" name="/Tests/Id3/MP3_Id3_PictureTest.php" role="test" />
-   <file baseinstalldir="/" md5sum="e91efb6ec1a7d16165d6fe260af3fcf6" name="phpunit.xml" role="data" />
-   <file baseinstalldir="/" md5sum="accae3f0faba28a461e0ef45ee46999f" name="README.md" role="data" />
+  <dir name="/">
+   <dir name="Tests">
+    <file name="bootstrap.php" role="test" />
+    <file name="file1.mp3" role="data" />
+    <file name="file2.mp3" role="data" />
+    <file name="file3.mp3" role="data" />
+    <file name="file4.mp3" role="data" />
+    <file name="file5.mp3" role="data" />
+    <file name="MP3_Id3Test.php" role="test" />
+    <file name="Id3/MP3_Id3_BestTest.php" role="test" />
+    <file name="Id3/MP3_Id3_ExceptionTest.php" role="test" />
+    <file name="Id3/MP3_Id3_GenreTest.php" role="test" />
+    <file name="Id3/MP3_Id3_IdTest.php" role="test" />
+    <file name="Id3/MP3_Id3_Idv1Test.php" role="test" />
+    <file name="Id3/MP3_Id3_Idv2Test.php" role="test" />
+    <file name="Id3/MP3_Id3_MetaTest.php" role="test" />
+    <file name="Id3/MP3_Id3_PictureTest.php" role="test" />
+   </dir>
+   <dir name="MP3">
+    <file name="Id3.php" role="php" />
+    <file name="Id3/Best.php" role="php" />
+    <file name="Id3/Exception.php" role="php" />
+    <file name="Id3/Genre.php" role="php" />
+    <file name="Id3/Id.php" role="php" />
+    <file name="Id3/Idv1.php" role="php" />
+    <file name="Id3/Idv2.php" role="php" />
+    <file name="Id3/Meta.php" role="php" />
+    <file name="Id3/Picture.php" role="php" />
+   </dir>
+   <file name="phpunit.xml" role="doc" />
+   <file name="README.md" role="doc" />
   </dir>
  </contents>
  <dependencies>
