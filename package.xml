@@ -35,7 +35,7 @@
    <file baseinstalldir="/" md5sum="cefd21904b7c910eca1d1c368d6ff7ca" name="/MP3/Id3/Idv2.php" role="php" />
    <file baseinstalldir="/" md5sum="868a299079903258af6424a8694252c5" name="/MP3/Id3/Meta.php" role="php" />
    <file baseinstalldir="/" md5sum="749e6e55678b0d671b16e50b1f3e89fc" name="/MP3/Id3/Picture.php" role="php" />
-   <file baseinstalldir="/" md5sum="4450e9da9b6888877f8c9e0920cf51eb" name="/Tests/bootstrap.php" role="test" />
+   <file baseinstalldir="/" md5sum="0327231ef08687c6ec0f0f2ae12c668d" name="/Tests/bootstrap.php" role="test" />
    <file baseinstalldir="/" md5sum="9f7878d99426077263dbcb9a6df4c3a4" name="/Tests/file1.mp3" role="test" />
    <file baseinstalldir="/" md5sum="1d69c5c455b3834d44e0805339dc3701" name="/Tests/file2.mp3" role="test" />
    <file baseinstalldir="/" md5sum="5887398f17f2a816464a63f9dd4c672e" name="/Tests/file3.mp3" role="test" />
