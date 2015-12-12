@@ -26,16 +26,16 @@
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
-   <file baseinstalldir="/" md5sum="70296da57e09236bf81612ab18183511" name="/MP3/Id3.php" role="php" />
-   <file baseinstalldir="/" md5sum="4f1e95961ca022028074a8b654edc007" name="/MP3/Id3/Best.php" role="php" />
-   <file baseinstalldir="/" md5sum="67de2e87f03467c8e1a50c556add9f80" name="/MP3/Id3/Exception.php" role="php" />
-   <file baseinstalldir="/" md5sum="cfa218a6b3e97ba72d6b42958db75c51" name="/MP3/Id3/Genre.php" role="php" />
-   <file baseinstalldir="/" md5sum="7770c00a1b438194d7b19a7784e5ccb4" name="/MP3/Id3/Id.php" role="php" />
-   <file baseinstalldir="/" md5sum="239b98b870e00e499f5b4e5613f978ad" name="/MP3/Id3/Idv1.php" role="php" />
-   <file baseinstalldir="/" md5sum="568a70b8b53562f21a59bf03c446246c" name="/MP3/Id3/Idv2.php" role="php" />
-   <file baseinstalldir="/" md5sum="18b1d87d2b5b8f524771f47ed9e42283" name="/MP3/Id3/Meta.php" role="php" />
-   <file baseinstalldir="/" md5sum="5b2335273eececb313faa6c316cad680" name="/MP3/Id3/Picture.php" role="php" />
-   <file baseinstalldir="/" md5sum="8b12bbfe0ef71aabcb198ca74f1ed9c4" name="/Tests/bootstrap.php" role="test" />
+   <file baseinstalldir="/" md5sum="cf71f6f38e5bc430c39579c2af5de4ad" name="/MP3/Id3.php" role="php" />
+   <file baseinstalldir="/" md5sum="6d84d221a5f88c618981dcb485b8eb9f" name="/MP3/Id3/Best.php" role="php" />
+   <file baseinstalldir="/" md5sum="3ae0b9dc0cba9f90b306b7e75773b2de" name="/MP3/Id3/Exception.php" role="php" />
+   <file baseinstalldir="/" md5sum="2fa3a80f512f98376bcb356566be219e" name="/MP3/Id3/Genre.php" role="php" />
+   <file baseinstalldir="/" md5sum="a0f3ae9015f0de551da7869e0724bae6" name="/MP3/Id3/Id.php" role="php" />
+   <file baseinstalldir="/" md5sum="f895d3b34d45a5a681fc478007e06b71" name="/MP3/Id3/Idv1.php" role="php" />
+   <file baseinstalldir="/" md5sum="cefd21904b7c910eca1d1c368d6ff7ca" name="/MP3/Id3/Idv2.php" role="php" />
+   <file baseinstalldir="/" md5sum="868a299079903258af6424a8694252c5" name="/MP3/Id3/Meta.php" role="php" />
+   <file baseinstalldir="/" md5sum="749e6e55678b0d671b16e50b1f3e89fc" name="/MP3/Id3/Picture.php" role="php" />
+   <file baseinstalldir="/" md5sum="4450e9da9b6888877f8c9e0920cf51eb" name="/Tests/bootstrap.php" role="test" />
    <file baseinstalldir="/" md5sum="9f7878d99426077263dbcb9a6df4c3a4" name="/Tests/file1.mp3" role="test" />
    <file baseinstalldir="/" md5sum="1d69c5c455b3834d44e0805339dc3701" name="/Tests/file2.mp3" role="test" />
    <file baseinstalldir="/" md5sum="5887398f17f2a816464a63f9dd4c672e" name="/Tests/file3.mp3" role="test" />
