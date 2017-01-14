@@ -10,7 +10,7 @@ class MP3_Id3Test extends PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->mock = $this->getMock('MP3_Id3', null, array(dirname(__FILE__) . '/file1.mp3'));
+        $this->mock = $this->getMock('MP3_Id3', null, array(dirname(__FILE__) . '/fixtures/file1.mp3'));
     }
 
     public function testMock()

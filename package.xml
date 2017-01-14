@@ -28,11 +28,11 @@
   <dir name="/">
    <dir name="Tests">
     <file name="bootstrap.php" role="test" />
-    <file name="file1.mp3" role="data" />
-    <file name="file2.mp3" role="data" />
-    <file name="file3.mp3" role="data" />
-    <file name="file4.mp3" role="data" />
-    <file name="file5.mp3" role="data" />
+    <file name="fixtures/file1.mp3" role="data" />
+    <file name="fixtures/file2.mp3" role="data" />
+    <file name="fixtures/file3.mp3" role="data" />
+    <file name="fixtures/file4.mp3" role="data" />
+    <file name="fixtures/file5.mp3" role="data" />
     <file name="MP3_Id3Test.php" role="test" />
     <file name="Id3/MP3_Id3_BestTest.php" role="test" />
     <file name="Id3/MP3_Id3_ExceptionTest.php" role="test" />
@@ -56,6 +56,7 @@
    </dir>
    <file name="phpunit.xml" role="doc" />
    <file name="README.md" role="doc" />
+   <file name="LICENSE" role="doc" />
   </dir>
  </contents>
  <dependencies>

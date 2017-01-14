@@ -25,7 +25,7 @@ class MP3_Id3_BestTest extends PHPUnit_Framework_TestCase
     {
         $object = new MP3_Id3_Best();
 
-        $read = $object->read(dirname(__FILE__) . '/../file1.mp3');
+        $read = $object->read(dirname(__FILE__) . '/../fixtures/file1.mp3');
 
         $this->assertInstanceOf('MP3_Id3_Best', $read);
     }
@@ -34,7 +34,7 @@ class MP3_Id3_BestTest extends PHPUnit_Framework_TestCase
     {
         $object = new MP3_Id3_Best();
 
-        $read = $object->read(dirname(__FILE__) . '/../file2.mp3');
+        $read = $object->read(dirname(__FILE__) . '/../fixtures/file2.mp3');
 
         $this->assertInstanceOf('MP3_Id3_Best', $read);
     }
@@ -43,7 +43,7 @@ class MP3_Id3_BestTest extends PHPUnit_Framework_TestCase
     {
         $object = new MP3_Id3_Best();
 
-        $read = $object->read(dirname(__FILE__) . '/../file3.mp3');
+        $read = $object->read(dirname(__FILE__) . '/../fixtures/file3.mp3');
 
         $this->assertInstanceOf('MP3_Id3_Best', $read);
     }
@@ -52,7 +52,7 @@ class MP3_Id3_BestTest extends PHPUnit_Framework_TestCase
     {
         $object = new MP3_Id3_Best();
 
-        $read = $object->read(dirname(__FILE__) . '/../file4.mp3');
+        $read = $object->read(dirname(__FILE__) . '/../fixtures/file4.mp3');
 
         $this->assertInstanceOf('MP3_Id3_Best', $read);
     }
@@ -61,7 +61,7 @@ class MP3_Id3_BestTest extends PHPUnit_Framework_TestCase
     {
         $object = new MP3_Id3_Best();
 
-        $read = $object->read(dirname(__FILE__) . '/../file5.mp3');
+        $read = $object->read(dirname(__FILE__) . '/../fixtures/file5.mp3');
 
         $this->assertInstanceOf('MP3_Id3_Best', $read);
     }
@@ -76,7 +76,7 @@ class MP3_Id3_BestTest extends PHPUnit_Framework_TestCase
 
     public function testWrite1()
     {
-        $file = dirname(__FILE__) . '/../file1.mp3';
+        $file = dirname(__FILE__) . '/../fixtures/file1.mp3';
         $tmpFile = dirname(__FILE__) . '/../tmp/testWrite1Best.mp3';
 
         $object = new MP3_Id3_Best();
@@ -90,7 +90,7 @@ class MP3_Id3_BestTest extends PHPUnit_Framework_TestCase
 
     public function testWrite2()
     {
-        $file = dirname(__FILE__) . '/../file2.mp3';
+        $file = dirname(__FILE__) . '/../fixtures/file2.mp3';
         $tmpFile = dirname(__FILE__) . '/../tmp/testWrite2Best.mp3';
 
         $object = new MP3_Id3_Best();
@@ -104,7 +104,7 @@ class MP3_Id3_BestTest extends PHPUnit_Framework_TestCase
 
     public function testWrite3()
     {
-        $file = dirname(__FILE__) . '/../file3.mp3';
+        $file = dirname(__FILE__) . '/../fixtures/file3.mp3';
         $tmpFile = dirname(__FILE__) . '/../tmp/testWrite3Best.mp3';
 
         $object = new MP3_Id3_Best();
@@ -118,7 +118,7 @@ class MP3_Id3_BestTest extends PHPUnit_Framework_TestCase
 
     public function testWrite4()
     {
-        $file = dirname(__FILE__) . '/../file4.mp3';
+        $file = dirname(__FILE__) . '/../fixtures/file4.mp3';
         $tmpFile = dirname(__FILE__) . '/../tmp/testWrite4Best.mp3';
 
         $object = new MP3_Id3_Best();
@@ -132,7 +132,7 @@ class MP3_Id3_BestTest extends PHPUnit_Framework_TestCase
 
     public function testWrite5()
     {
-        $file = dirname(__FILE__) . '/../file5.mp3';
+        $file = dirname(__FILE__) . '/../fixtures/file5.mp3';
         $tmpFile = dirname(__FILE__) . '/../tmp/testWrite5Best.mp3';
 
         $object = new MP3_Id3_Best();
@@ -146,7 +146,7 @@ class MP3_Id3_BestTest extends PHPUnit_Framework_TestCase
 
     public function testWriteFail()
     {
-        $file = dirname(__FILE__) . '/../file1.mp3';
+        $file = dirname(__FILE__) . '/../fixtures/file1.mp3';
         $tmpFile = 'fake_file.mp3';
 
         $object = new MP3_Id3_Best();
